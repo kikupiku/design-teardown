@@ -1,5 +1,6 @@
 body {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 header {
@@ -25,6 +26,9 @@ header {
 .community-links,
 .guide {
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #fomo {
@@ -36,6 +40,10 @@ header {
   z-index: 10;
   height: 80px;
   width: 250px;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80px;
 }
 
 .articles-container {
@@ -45,6 +53,15 @@ header {
 
 .article {
   height: 695px;
+}
+
+p.author {
+  font-size: 14px;
+}
+
+p.title {
+  font-size: 42px;
+  font-weight: bold;
 }
 
 .posts-container {
@@ -58,11 +75,47 @@ header {
   grid-column-start: span 1;
 }
 
+.post-title {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 .advert {
   background-color: #262626;
 }
 
-div#ad1 {
+.advert,
+.book-ad,
+.newsletter-cta,
+footer p {
+  color: white;
+}
+
+.advert,
+.book-ad,
+.community-links,
+.newsletter-cta,
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.advert p,
+.book-ad p,
+.picture,
+.newsletter-cta p {
+  width: 50%;
+}
+
+div.ad1 {
   grid-row: 2 / span 1;
   grid-column: 1 / span 2;
   border-radius: 10px;
@@ -82,11 +135,21 @@ div.ad2 {
 
 .inter {
   height: 240px;
+  line-height: 240px;
+  font-size: 14px;
+  text-align: center;
+  font-family: serif !important;
 }
 
 .book-ad.bigger {
   height: 1100px;
   background-color: #696969;
+}
+
+.picture {
+  height: 550px;
+  background-color: #343434;
+  z-index: 10;
 }
 
 .links-container {
@@ -97,10 +160,45 @@ div.ad2 {
 .person-of-week {
   grid-column: 1 / -1;
   background-color: #C0C0C0;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 450px;
+}
+
+.photo-container {
+  grid-column: 1 / 2;
+  margin: 0 auto;
+}
+
+.photo-container,
+.person-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photo {
+  background-color: #262626;
+  height: 200px;
+  width: 200px;
+}
+
+.person-text {
+  grid-column: 2 / -1;
 }
 
 .community-links {
   background-color: #DCDCDC;
+}
+
+.community-links p,
+.footer p {
+  width: 80%;
+}
+
+.link-title {
+  font-weight: bold;
+  font-size: 28px;
 }
 
 .book-ad.smaller {
@@ -117,6 +215,13 @@ div.ad2 {
   grid-template-rows: repeat(2, 750px);
 }
 
+li {
+  text-decoration: underline;
+  font-size: 26px;
+  font-family: serif !important;
+  line-height: 2;
+}
+
 .newsletter-cta {
   grid-column: 2 / span 2;
 }
@@ -125,4 +230,10 @@ div.ad2 {
   background-color: #000000;
   height: 720px;
   width: 100%;
+}
+
+.footer p {
+  text-align: center;
+  line-height: 3;
+  word-spacing: 10px;
 }
